@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#1a73e8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="/icon-192x192.png">
 </head>
 
 <body>
@@ -61,7 +55,10 @@
                             <div class="slide-grid">
                                 <div class="info-card">
                                     <h3>Fundação</h3>
-                                    <p>Fundada em 1544, São Mateus é uma das cidades mais antigas do Brasil.</p>
+                                    <p>Fundada em 1544, São Mateus é uma das cidades mais antigas do Brasil.A Vila de
+                                        São Mateus virou Município pelo Ato Provincial de 03 de abril de 1848, mas a
+                                        celebração ocorre no dia 21 de setembro, início da colonização européia, em
+                                        1544. </p>
                                 </div>
                             </div>
                             <a href="#" class="arrow-link-down" onclick=" nextSlide(); return false;">
@@ -340,18 +337,6 @@
             e.preventDefault();
         });
 
-        // Registrar o Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registrado com sucesso: ', registration.scope);
-                    })
-                    .catch(error => {
-                        console.log('Falha ao registrar ServiceWorker: ', error);
-                    });
-            });
-        }
     </script>
 </body>
 
