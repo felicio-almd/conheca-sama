@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Mateus em Foco</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('Porto.jpg') no-repeat center center/cover;
+            opacity: 90%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery img {
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Ajuste para tablets */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <main id="home" class="hero min-h-screen">
+        <div class="text-center px-4">
+            <h2 class="text-4xl font-bold mb-4 z-100">Bem-vindo a São Mateus</h2>
+            <p class="text-lg mb-6">Conheça a cidade, descubra a história, a cultura e as informações gerais da cidade!
+            </p>
+            <a href="#sobre" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Saiba Mais</a>
+        </div>
+    </main>
+
+    <!-- Sobre a Cidade
+    <section id="sobre" class="py-10 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-center mb-6">Sobre São Mateus</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-base text-gray-700">
+                        São Mateus é um destino repleto de história e charme. Fundada em [ano], a cidade combina
+                        tradição e modernidade, oferecendo aos visitantes uma experiência única. Conhecida por
+                        [característica marcante, ex.: suas praias, montanhas, festivais], é o lugar perfeito para quem
+                        busca cultura, natureza e hospitalidade.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://source.unsplash.com/random/600x400/?culture" alt="Cultura local"
+                        class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- história da cidade -->
+    <!-- <section id="história" class="py-10 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-center mb-6">Principais Atrativos</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 gallery">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/400x300/?landmark" alt="Atrativo 1"
+                        class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold">Ponto Turístico 1</h4>
+                        <p class="text-gray-600 text-sm">Descrição breve do atrativo, como um parque, museu ou monumento
+                            histórico.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/400x300/?nature" alt="Atrativo 2"
+                        class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold">Ponto Turístico 2</h4>
+                        <p class="text-gray-600 text-sm">Descrição breve de outro atrativo, como uma praia ou trilha.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/random/400x300/?festival" alt="Atrativo 3"
+                        class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-lg font-semibold">Evento Cultural</h4>
+                        <p class="text-gray-600 text-sm">Descrição de um festival ou evento tradicional da cidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- informações gerais -->
+    <!-- <section id="informacoes">
+
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">© 2025 Conheça São Mateus. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
