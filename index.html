@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <div class="swiper">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bem-vindo -->
-            <div class="swiper-slide hero">
+            <div class="swiper-slide slide-welcome">
                 <!-- Vídeo de fundo -->
-                <!-- <iframe src="" allow="autoplay" allowfullscreen frameborder="0" class="video"></iframe> -->
                 <iframe width="1324" height="745"
                     src="https://www.youtube.com/embed/-f-BULCAxI0?si=rfDnMxeVK7jPwWrd&amp;controls=0&amp;loop=1&amp;playlist=-f-BULCAxI0&amp;start=22&amp;autoplay=1&amp;mute=1&amp;showinfo=0"
                     title="Voo de Drone DJI mini 4 mostra o Porto de São Mateus, ES." allow="autoplay; encrypted-media"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="hero-video">
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="welcome-video">
                 </iframe>
                 <div class="map-card">
                     <iframe title="mapa-sama"
@@ -30,16 +30,17 @@
                     <button class="heart-button" onclick="floatHeart(event)">❤️</button>
                 </div>
 
-                <div class="content">
-                    <div class="content-text">
-                        <h2>BEM VINDO A SÃO MATEUS</h2>
-                        <p>Conheça a cidade, descubra a história, a cultura e as informações gerais da cidade!</p>
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); ">BEM VINDO A SÃO MATEUS</h2>
+                        <p style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); ">Conheça a cidade, descubra a história,
+                            a cultura e as informações gerais da cidade!</p>
                     </div>
-                    <!-- <a class="content-link" href="#" onclick="nextSlide(); return false;">SAIBA MAIS</a> -->
+                    <!-- <a class="welcome-link" href="#" onclick="nextSlide(); return false;">SAIBA MAIS</a> -->
                 </div>
 
                 <a href="#" class="arrow-link-right" onclick=" nextSlide(); return false;">
-                    <p>Arraste para ver mais</p>
+                    <p>Clique aqui para ver mais</p>
                     <span class="material-symbols-outlined" style="font-size:4rem;">arrow_right_alt</span>
                 </a>
             </div>
@@ -50,180 +51,223 @@
                     <div class="swiper-wrapper">
                         <!-- Slide vertical 1 -->
                         <div class="swiper-slide slide-content">
-                            <div class="slide-icon">🏛️</div>
-                            <h2>HISTÓRIA</h2>
+                            <div class="history-slide-icon">🏛️</div>
+                            <h2 class="history-info-title">HISTÓRIA</h2>
                             <div class="slide-grid">
-                                <div class="info-card">
-                                    <h3>Fundação</h3>
-                                    <p>Fundada em 1544, São Mateus é uma das cidades mais antigas do Brasil.A Vila de
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Fundação</h3>
+                                    <p class="history-info-text">Fundada em 1544, São Mateus é uma das cidades mais
+                                        antigas do Brasil. A Vila de
                                         São Mateus virou Município pelo Ato Provincial de 03 de abril de 1848, mas a
                                         celebração ocorre no dia 21 de setembro, início da colonização européia, em
                                         1544. </p>
                                 </div>
                             </div>
-                            <a href="#" class="arrow-link-down" onclick=" nextSlide(); return false;">
-                                <span class="material-symbols-outlined" style="font-size:3rem;">arrow_downward</span>
-                            </a>
+                            <span class="history-info">
+                                Arraste para baixo para ver mais!
+                            </span>
+                            <span class="history-info-2">
+                                Clicar nos cards é legal!
+                            </span>
                         </div>
 
                         <!-- Slide vertical 2 -->
                         <div class="swiper-slide slide-content">
-                            <a href="#" class="arrow-link-up" onclick=" nextSlide(); return false;">
-                                <span class="material-symbols-outlined" style="font-size:3rem;">arrow_upward</span>
-                            </a>
-                            <div class="slide-icon">🏠</div>
-                            <h2>PATRIMÔNIO</h2>
+                            <div class="history-slide-icon">🏠</div>
+                            <h2 class="history-info-title">PATRIMÔNIO</h2>
                             <div class="slide-grid">
-                                <div class="info-card">
-                                    <h3>Arquitetura</h3>
-                                    <p>Casarões coloniais preservados contam a história da cidade.</p>
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Arquitetura Colonial</h3>
+                                    <p class="history-info-text">Casarões coloniais preservados contam a história da
+                                        cidade. Além da Igreja Velha,
+                                        que é uma das mais antigas do Brasil!</p>
+                                </div>
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Comunidades Quilombolas</h3>
+                                    <p class="history-info-text">Ricas em cultura, tradição e resistência, preservam a
+                                        herança afro-brasileira no
+                                        município.</p>
+                                </div>
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Patrimônio Natural</h3>
+                                    <p class="history-info-text">Destacam-se áreas como o rio Cricaré e o Parque
+                                        Estadual de Itaúnas, com valor
+                                        ecológico e turístico.</p>
                                 </div>
                             </div>
-                            <a href="#" class="arrow-link-down" onclick=" nextSlide(); return false;">
-                                <span class="material-symbols-outlined" style="font-size:3rem;">arrow_downward</span>
-                            </a>
+                            <span class="history-info">
+                                Arraste para baixo para ver mais!
+                            </span>
                         </div>
 
                         <!-- Slide vertical 3 -->
                         <div class="swiper-slide slide-content">
-                            <a href="#" class="arrow-link-up" onclick=" nextSlide(); return false;">
-                                <span class="material-symbols-outlined" style="font-size:3rem;">arrow_upward</span>
-                            </a>
-                            <div class="slide-icon">🎉</div>
-                            <h2>TRADIÇÕES</h2>
+                            <div class="history-slide-icon"><img src="carnaval-guriri.jpg" alt="carnaval"></div>
+                            <h2 class="history-info-title">TRADIÇÕES</h2>
                             <div class="slide-grid">
-                                <div class="info-card">
-                                    <h3>Cultura</h3>
-                                    <p>Manifestações culturais e festas típicas capixabas.</p>
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Carnaval de Rua</h3>
+                                    <p class="history-info-text">Desfiles de blocos carnavalescos e muita animação pelas
+                                        ruas da cidade, com
+                                        música, fantasia e tradição.</p>
+                                </div>
+                                <div class="history-info-card">
+                                    <h3 class="history-info-subtitle">Festa da Cidade</h3>
+                                    <p class="history-info-text">Evento anual com shows, rodeios, exposições e
+                                        atividades culturais que celebram o
+                                        aniversário do município.</p>
                                 </div>
                             </div>
-                            <a href="#" class="arrow-link-right" onclick=" nextSlide(); return false;">
-                                <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
-                            </a>
+
                         </div>
-                        <a href="#" class="arrow-link-left" onclick=" nextSlide(); return false;">
-                            <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
-                        </a>
+
                     </div>
 
-
-                    <!-- Paginação vertical opcional -->
+                    <a href="#" class="arrow-link-left" onclick=" prevSlide(); return false;">
+                        <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+                    </a>
+                    <a href="#" class="arrow-link-right" onclick=" nextSlide(); return false;">
+                        <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
+                    </a>
                     <!-- <div class="swiper-pagination"></div> -->
-
                 </div>
             </div>
 
-
             <!-- Slide 3: CONHECIDA -->
-            <div class="swiper-slide slide-conhecida">
-                <div class="slide-content">
+            <div class="swiper-slide city-highlights-slide">
+                <div class="highlights-content">
                     <h2>CONHECIDA POR</h2>
 
-                    <!-- Swiper interno vertical -->
-                    <div class="swiper conhecida-inner-swiper">
+                    <div class="swiper highlights-swiper">
                         <div class="swiper-wrapper">
 
-                            <!-- Slide interno 1: Pimenta -->
                             <div class="swiper-slide">
-                                <div class="info-card">
+                                <div class="highlight-card">
                                     <h3>Pimenta-do-reino</h3>
                                     <p>São Mateus é referência nacional na produção de pimenta-do-reino, sendo um dos
                                         principais polos do Brasil.</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 2: Turismo -->
                             <div class="swiper-slide">
-                                <div class="info-card">
+                                <div class="highlight-card">
                                     <h3>Turismo</h3>
                                     <p>Com belas praias como Guriri, São Mateus atrai turistas o ano inteiro, combinando
                                         litoral e história.</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 3: Agropecuária -->
                             <div class="swiper-slide">
-                                <div class="info-card">
+                                <div class="highlight-card">
                                     <h3>Agropecuária</h3>
                                     <p>A economia forte também está na agropecuária, com destaque para a criação de gado
                                         e cultivo agrícola diversificado.</p>
                                 </div>
                             </div>
-
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
+                <a href="#" class="arrow-link-left" onclick=" prevSlide(); return false;">
+                    <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+                </a>
+                <a href="#" class="arrow-link-right" onclick=" nextSlide(); return false;">
+                    <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
+                </a>
             </div>
 
-            <!-- Slide 3: Infos Gerais -->
-            <div class="swiper-slide slide-conhecida">
+
+            <!-- Slide 4: Infos Gerais -->
+            <div class="swiper-slide slide-gerais">
                 <div class="slide-content">
-                    <h2>INFORMAÇÕES GERAIS DA CIDADE</h2>
+                    <h3 class="title-infos">INFORMAÇÕES GERAIS DA CIDADE</h3>
 
-                    <!-- Swiper interno vertical -->
-                    <div class="swiper conhecida-inner-swiper">
-                        <div class="swiper-wrapper">
+                    <div class="gerais-grid-container">
+                        <div class="gerais-topics-grid">
+                            <div class="special-grid-item" data-topic-id="placeholder">
+                                <h3>CLIQUE EM UM CARD ABAIXO E VEJA OS DETALHES</h3>
+                            </div>
 
-                            <!-- Slide interno 1: Geografia e Localização -->
-                            <div class="swiper-slide">
-                                <div class="info-card">
-                                    <h3>Geografia e Localização</h3>
+                            <div class="gerais-grid-item" data-topic-id="geografia">
+                                <h3>Geografia e Localização</h3>
+                                <div class="full-content" style="display: none;">
                                     <p>São Mateus está situada no norte do Espírito Santo, a cerca de 218 km de Vitória.
                                         Faz divisa com Conceição da Barra, Jaguaré, Nova Venécia e Boa Esperança, além
                                         de fronteira com a Bahia.</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 2: População e Área -->
-                            <div class="swiper-slide">
-                                <div class="info-card">
-                                    <h3>População e Área</h3>
+                            <div class="gerais-grid-item" data-topic-id="populacao">
+                                <h3>População e Área</h3>
+                                <div class="full-content" style="display: none;">
                                     <p>População estimada em cerca de 130 mil habitantes, área territorial de 2.343 km²
                                         e densidade demográfica de aproximadamente 55 hab/km².</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 3: Economia - Petróleo e Gás -->
-                            <div class="swiper-slide">
-                                <div class="info-card">
-                                    <h3>Economia: Petróleo e Gás</h3>
+                            <div class="gerais-grid-item" data-topic-id="petroleo">
+                                <h3>Economia: Petróleo e Gás</h3>
+                                <div class="full-content" style="display: none;">
                                     <p>O município faz parte da região petrolífera do norte do Espírito Santo, com
                                         campos importantes de exploração.</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 4: Economia - Agronegócios -->
-                            <div class="swiper-slide">
-                                <div class="info-card">
-                                    <h3>Economia: Agronegócios</h3>
+                            <div class="gerais-grid-item" data-topic-id="agronegocios">
+                                <h3>Economia: Agronegócios</h3>
+                                <div class="full-content" style="display: none;">
                                     <p>Destaque para o cultivo de café, frutas tropicais, eucalipto e pastagens.</p>
                                 </div>
                             </div>
 
-                            <!-- Slide interno 5: Economia - Pesca -->
-                            <div class="swiper-slide">
-                                <div class="info-card">
-                                    <h3>Economia: Pesca</h3>
+                            <div class="gerais-grid-item" data-topic-id="pesca">
+                                <h3>Economia: Pesca</h3>
+                                <div class="full-content" style="display: none;">
                                     <p>A pesca é uma atividade tradicional na região costeira de São Mateus.</p>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="gerais-detail-panel">
+                            <h3>Detalhes do Tópico</h3>
+                            <p id="gerais-detail-title">Selecione um tópico à esquerda para ver os detalhes.</p>
+                            <div id="gerais-detail-content"></div>
+                        </div>
                     </div>
                 </div>
+                <a href="#" class="arrow-link-left" onclick=" prevSlide(); return false;">
+                    <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+                </a>
+                <a href="#" class="arrow-link-right" onclick=" nextSlide(); return false;">
+                    <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
+                </a>
             </div>
 
-
-
-            <!-- Slide 4: Ultimo, Fim -->
+            <!-- Slide 5: Ultimo, Fim -->
             <div class="swiper-slide slide-finish">
-                <div class="slide-content">
-                    <h2>OBRIGADO POR PRESTIGIAR</h2>
+                <div class="finish-content">
+                    <h2 class="finish-title">OBRIGADO POR PRESTIGIAR</h2>
+                    <p class="finish-message">Esperamos que tenha gostado de conhecer São Mateus!</p>
+                    <div class="finish-footer">
+                        <p>Visite-nos em breve!</p>
+                        <div class="finish-contact-info">
+                            <span class="material-symbols-outlined">location_on</span> São Mateus, ES
+                            <span class="material-symbols-outlined">public</span> www.saomateus.es.gov.br
+                        </div>
+                    </div>
                 </div>
+                <a href="#" class="arrow-link-left" onclick=" prevSlide(); return false;">
+                    <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+                </a>
             </div>
 
         </div>
 
         <!-- Navegação -->
+
+
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
         <!-- <div class="swiper-pagination"></div> -->
     </div>
 
@@ -234,14 +278,8 @@
             loop: false,
             speed: 800,
             effect: 'slide',
-
+            allowTouchMove: false,
             // Navegação
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // Paginação
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -270,9 +308,13 @@
             }
         });
 
-        // Função para ir para o próximo slide
+        const swiper2 = document.querySelector('.swiper').swiper;
         function nextSlide() {
-            swiper.slideNext();
+            swiper2.slideNext();
+        }
+
+        function prevSlide() {
+            swiper2.slidePrev();
         }
 
         const verticalSwiper = new Swiper('.vertical-swiper', {
@@ -288,20 +330,20 @@
             },
         });
 
-        const conhecidaInnerSwiper = new Swiper('.conhecida-inner-swiper', {
-            direction: 'vertical',
-            slidesPerView: 1,
+        const highlightsSwiper = new Swiper('.highlights-swiper', {
+            direction: 'horizontal',
+            slidesPerView: 1.7,
+            centeredSlides: true,
+            loop: true,
             spaceBetween: 30,
             mousewheel: true,
             pagination: {
-                el: '.conhecida-inner-swiper .swiper-pagination',
+                el: '.highlights-swiper .swiper-pagination',
                 clickable: true,
             },
+            allowTouchMove: true
         });
 
-
-
-        // Função do coração flutuante
         function floatHeart(event) {
             const heart = document.createElement('div');
             heart.classList.add('floating-heart');
@@ -314,7 +356,6 @@
 
             document.body.appendChild(heart);
 
-            // Remover o coração após a animação
             setTimeout(() => {
                 heart.remove();
             }, 1500);
@@ -336,6 +377,36 @@
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
+
+        const gridItems = document.querySelectorAll('.gerais-grid-item');
+        const detailPanelTitle = document.getElementById('gerais-detail-title');
+        const detailPanelContent = document.getElementById('gerais-detail-content');
+
+        // Função para exibir os detalhes de um tópico
+        function showTopicDetails(item) {
+            gridItems.forEach(i => i.classList.remove('active'));
+
+            item.classList.add('active');
+
+            const title = item.querySelector('h3').textContent;
+            const fullContentHtml = item.querySelector('.full-content').innerHTML;
+
+            detailPanelTitle.textContent = title;
+            detailPanelContent.innerHTML = fullContentHtml;
+
+            detailPanelContent.scrollTop = 0;
+        }
+
+        gridItems.forEach(item => {
+            item.addEventListener('click', () => {
+                showTopicDetails(item);
+            });
+        });
+
+        if (gridItems.length > 0) {
+            showTopicDetails(gridItems[0]);
+        }
+
 
     </script>
 </body>
