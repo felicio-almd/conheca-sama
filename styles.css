@@ -289,11 +289,60 @@ body {
 }
 
 
+.modal-image {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.modal-image.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close-btn {
+    position: fixed;
+    background: rgba(255, 68, 68, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(204, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.history-info-card {
+    cursor: pointer;
+}
+
+
+
 
 /* Estilos para o Slide 'CONHECIDA POR' */
 .city-highlights-slide {
     width: 100%;
-    background: linear-gradient(135deg, #D4EDDA, #C8E6C9);
+    background: linear-gradient(135deg, #adcab4, #5a695b);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     display: flex;
@@ -345,42 +394,84 @@ body {
 }
 
 /* --- Estilos para os Cards de Destaque (highlight-card) --- */
+.highlight-card-pimenta {
+    /* background-color: #ffffff; */
+    background: url('pimenta-do-reino.jpg') no-repeat center center/cover;
+}
+
+.highlight-card-turismo {
+    /* background-color: #ffffff; */
+    background: url('turismo.jpg') no-repeat center center/cover;
+}
+
+.highlight-card-agro {
+    background: url('agropecuaria.jpg') no-repeat center center/cover;
+    /* background-color: #ffffff; */
+
+}
+
 .highlight-card {
-    background-color: #ffffff;
+    padding: 0 !important;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.highlight-card-text {
+    padding: 20px;
+    width: 50%;
+}
+
+.highlight-card-pimenta,
+.highlight-card-turismo,
+.highlight-card-agro {
+    width: 50%;
+    height: 100%;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 50px 25px 30px 25px;
+    padding: 80px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-card h3 {
-    font-size: 2.6rem;
-    color: #89a48a;
+    font-size: 2.4rem;
+    color: #d4f7d5;
     margin-top: 0;
     margin-bottom: 15px;
     letter-spacing: 0.5px;
 }
 
+/* 
+.highlight-card-agro h3 {
+    color: #4c584c;
+}
+
+.highlight-card-turismo h3 {
+    color: #ffffff;
+} */
+
 .highlight-card p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .highlights-swiper .swiper-pagination {
-    height: 40px;
+    height: 25px;
     text-align: center;
 }
 
 .highlights-swiper .swiper-pagination-bullet {
-    background-color: #89a48a;
+    background-color: #ffffff;
     opacity: 0.5;
     margin: 0 6px;
     width: 10px;
@@ -388,7 +479,7 @@ body {
 }
 
 .highlights-swiper .swiper-pagination-bullet-active {
-    background-color: #89a48a;
+    background-color: #ffffff;
     opacity: 1;
     transform: scale(1.2);
 }
